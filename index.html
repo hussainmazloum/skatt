@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oversikt over din skatt</title>
+    <link rel="icon" href="image/skatt.ico" />
+    <link rel="stylesheet" href="skatt.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="top">
+        <div class="bilde">
+          <img src="image/skatt_logo.png" alt="Skatt" />
+          <h2>Mazloum Etaten</h2>
+        </div>
+
+        <div class="sokebruttoLonn">
+          <input type="text" id="sokNavn" placeholder="Søk etter navn"/>
+          <button class="btn" onclick="sokNavn()">Søk</button>
+        </div>
+      </div>
+
+      <h1>Oversikt over din skatt</h1>
+
+      <div>
+        <input id="navn" type="text" placeholder="Navn">
+        <input type="number" id="lonn" min="0" placeholder="Lønn" />
+        <input type="number" id="skattesats" min="0" max="100" placeholder="Skatt %"/>
+        <button class="btn" onclick="beregneSkatte()">Regne ut</button>
+      </div>
+      <div class="table-container">
+        <h2 style="justify-content: start;width: 100%;color: #F4A261;font-size: clamp(18px, 4vw, 30px);">Beregning av brutto- og nettolønn per måned</h2>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Navn</th>
+              <th>Bruttolønn</th>
+              <th>Skatt (%)</th>
+              <th>Skattetrekk</th>
+              <th>Netto utbetalt</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="tableBody"></tbody>
+        </table>
+
+        <hr />
+        <!-- Dette er en linje mellom to tabellene -->
+
+        <table class="arlig-table">
+          <h2 style="justify-content: start;width: 100%;color: #F4A261;font-size: clamp(18px, 4vw, 30px);">Beregning av årlig brutto- og nettolønn</h2>
+          <thead>
+            <tr>
+              <th>Navn</th>
+              <th>Bruttolønn</th>
+              <th>Årlig brutto</th>
+              <th>Årlig netto</th>
+              <th>Årlig skatt</th>
+              <!-- <th>Årlig uføre-skatt</th>  -->
+            </tr>
+          </thead>
+          <tbody id="tablekroppen"></tbody>
+        </table>
+      </div>
+
+      <div class="buttons">
+        <button class="btn" onclick="lagreData()">Lagre</button>
+        <button class="btn" onclick="lukkSide()">Lukke</button>
+        <button class="btn" onclick="fjerneData()">Slette</button>
+
+        <p
+          style="
+            color: rgb(255, 255, 255);
+            text-align: right;
+            width: 100%;
+            font-size: 12px;
+          "
+        >
+          H. Mazloum
+        </p>
+      </div>
+    </div>
+
+    <p style="color: #1d4c3d">&copy; Mazloum 2026</p>
+
+    <script src="skatt.js"></script>
+  </body>
+</html>
