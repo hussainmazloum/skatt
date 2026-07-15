@@ -190,7 +190,7 @@ function fjerneData() {
 
 function lukkSide() {
   if (confirm("Vil du lukke siden?")) {
-    window.close();
+    window.location.href = "https://www.google.com/";
   }
 }
 
