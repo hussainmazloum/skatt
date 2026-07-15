@@ -224,11 +224,19 @@ img {
     color: rgb(7, 90, 32);
 }
 
-
+/* 
 .content-table td:first-child,
 .arlig-table td:first-child {
     text-align: left;
 }
+
+
+.content-table th:first-child,
+.arlig-table th:first-child {
+    text-align: left;
+} */
+
+
 
 
 /*----------------------------------- Mobile divices-----------------------------------------*/
