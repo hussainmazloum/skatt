@@ -48,15 +48,16 @@ body {
 .bilde h2 {
   color:white;
 }
-.sokebruttoLonn {
+.sokEtterNavn {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 5px;
     margin-left: auto;
+    
 }
 
-.sokebruttoLonn input {
+.sokEtterNavn input {
     flex: 1;
     max-width: 180px;
     height: 30px;
@@ -247,7 +248,7 @@ img {
     gap: 10px;
   }
 
-  .sokebruttoLonn {
+  .sokEtterNavn {
     width: 100%;
     justify-content: center;
     margin-left: 0;
@@ -277,11 +278,11 @@ img {
   }
   
 
-.sokebruttoLonn input {
+.sokEtterNavn input {
   width: 200px;
 }
 
-.sokebruttoLonn .btn{
+.sokEtterNavn .btn{
   width: 20%;
   height: 34px;
 }
