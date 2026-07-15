@@ -11,14 +11,29 @@ body {
   padding: 40px 0;
   box-sizing: border-box; /* For å hindre at høyden overstiger skjermhøyden på grunn av padding*/
 }
-/* 
-.content >.sokebruttoLonn{
+
+.content {
   display: flex;
-  justify-content:space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  border: 1px solid red;
-} */
+  background-color: rgb(59, 81, 104);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+
+  width: min(95%, 1100px);
+  box-sizing: border-box;
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.content > div:not(.top) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .top{
   display: flex;
   justify-content: space-between;
@@ -48,42 +63,6 @@ body {
     font-size: 16px;
 }
 
-.table-container {
-    max-height: 400px;
-    overflow-y: auto;
-    width: min(100%, 870px);
-    margin: 25px auto;
-    padding-right: 15px;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(59, 81, 104);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-
-  width: min(95%, 1100px);
-  box-sizing: border-box;
-  border: 1px solid rgb(80, 80, 80);
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.content > div:not(.top) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-
-/* 
-  font-size: clamp(22px, 5vw, 32px);
-  Minimum size: 22px — the font will never be smaller than 22px.
-  Preferred size: 5vw — the font scales with the viewport width (5% of the viewport width).
-  Maximum size: 32px — the font will never be larger than 32px.*/
 
 h1 {
   font-size: clamp(22px, 5vw, 32px);
@@ -94,12 +73,13 @@ h1 {
   text-align: center;
   padding: 20px;
 }
-hr {
-    width: 75%;
-    height: 1px;
-    border: none;
-    background-color: rgba(255,255,255,0.4);
-    margin: 35px auto;
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    width: min(100%, 870px);
+    margin: 25px auto;
+    padding-right: 15px;
 }
 
 .content-table,
@@ -109,6 +89,7 @@ hr {
   font-size: 20px;
   width: 100%;
   color: #ffffff;
+  width: 100%;
 }
 
 .content-table thead tr,
@@ -137,6 +118,7 @@ hr {
 .arlig-table tbody tr:nth-of-type(even) {
     background-color: #4d4c4c;
     color: white;
+
 }
 
 
@@ -241,7 +223,7 @@ img {
 .arlig-table td:first-child {
     text-align: left;
 }
-
+/* 
 .content-table td:first-child,
 .arlig-table td:first-child {
     white-space: nowrap;
@@ -255,7 +237,7 @@ img {
 
 .content-table {
     width: 100%;
-}
+} */
 
 
 

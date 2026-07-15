@@ -13,6 +13,7 @@ function beregneSkatte() {
     word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
   )
   .join(" ");
+  
   const lonnVerdi = Number(lonn.value);
   const skattProsent = Number(skattesats.value);
 
@@ -87,20 +88,23 @@ function beregneSkatte() {
     <td><span style="color:#ffffff;">${skattProsent}</span> %</td>
     <td><span style="color: rgb(38, 251, 0);">${formatertSkatt}</span> kr</td>
     <td><span style="color:#ffffff;">${formatertLonn}</span> kr</td>
-    <td>
-        <button class="remove-btn" onclick="slettRad(this)">
-            Slette
-        </button>
-    </td>
+    
 </tr>`;
 
   tablekroppen.innerHTML += `
 <tr>
     <td><span style="color:gold;">${nom}</span></td>
-    <td><span style="color:#ffffff;">${formatertPris}</span>  kr</td>
+    <!-- <td><span style="color:#ffffff;">${formatertPris}</span>  kr</td> -->
     <td><span style="color:#ffffff;">${formatertArligBrutto}</span>  kr</td>
     <td><span style="color:#ffffff;">${formatertArligNetto}</span>  kr</td>
     <td><span style="color: rgb(38, 251, 0);">${formatertArligSkatt}</span>  kr</td>
+
+    <td>
+        <button class="remove-btn" onclick="slettRad(this)">
+            Slette
+        </button>
+    </td>
+
     <!-- <td><span style="color:#ffffff;">${formatertuforArligSkatt}</span> kr</td> -->
    
 </tr> `;
@@ -152,7 +156,7 @@ function slettRad(slettbtn) {
   const row = slettbtn.closest("tr"); // closest("tr") søker etter det nærmeste <tr>-elementet (tabellraden) som inneholder knappen.Denne raden lagres i variabelen `row`.
 
   // Radnummeret i tbody
-  const index = Array.from(tableBody.rows).indexOf(row); //Forklaring : "tableBody.rows" Returnerer alle <tbody>-rader.
+  const index = Array.from(tablekroppen.rows).indexOf(row); //Forklaring : "tableBody.rows" Returnerer alle <tbody>-rader.
   //tableBody.rows er en HTMLCollection, ikke en array.Derfor konverterer vi den til en array:Array.from(tableBody.rows)
   // "indexOf(row)" Den søker etter raden hvis knapp brukeren klikket på.
   if (confirm("Er du sikker på at du vil slette den raden i tabellen?")) {
