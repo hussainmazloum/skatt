@@ -121,6 +121,11 @@ h1 {
 
 }
 
+#sokNavn{
+  border-radius: 50px;
+  padding-left: 20px;
+  width: 100%;
+}
 
  input {
   width: 170px;
@@ -223,22 +228,6 @@ img {
 .arlig-table td:first-child {
     text-align: left;
 }
-/* 
-.content-table td:first-child,
-.arlig-table td:first-child {
-    white-space: nowrap;
-}
-
-.content-table th:last-child,
-.content-table td:last-child {
-    width: 70px;
-    padding: 5px;
-}
-
-.content-table {
-    width: 100%;
-} */
-
 
 
 /*----------------------------------- Mobile divices-----------------------------------------*/
@@ -289,7 +278,11 @@ img {
   
 
 .sokebruttoLonn input {
-  width: 180px;
+  width: 200px;
+}
+
+.sokebruttoLonn .btn{
+  width: 20%;
 }
 
   .btn {

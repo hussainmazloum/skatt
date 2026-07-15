@@ -13,7 +13,7 @@ function beregneSkatte() {
     word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
   )
   .join(" ");
-  
+
   const lonnVerdi = Number(lonn.value);
   const skattProsent = Number(skattesats.value);
 
@@ -101,7 +101,7 @@ function beregneSkatte() {
 
     <td>
         <button class="remove-btn" onclick="slettRad(this)">
-            Slette
+            <i class="fa-solid fa-delete-left"></i>
         </button>
     </td>
 
