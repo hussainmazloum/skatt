@@ -16,18 +16,14 @@ function beregneSkatte() {
 
   const lonnVerdi = Number(lonn.value);
   const skattProsent = Number(skattesats.value);
+  const nomNavn = nom;
 
   //--------------------------------------------------------------
   function skatteIntekt(lonn, prosent) {
     return (lonn * prosent) / 100;
   }
-  if (
-    isNaN(lonnVerdi) ||
-    isNaN(skattProsent) ||
-    lonnVerdi <= 0 ||
-    skattProsent <= 0
-  ) {
-    alert("Fyll inn gyldige tall.");
+  if ( nomNavn === "" || isNaN(lonnVerdi) || isNaN(skattProsent) || lonnVerdi <= 0 || skattProsent <= 0 ) {
+    alert("Fyll inn gyldige verdier.");
     return;
   }
   if (skattProsent > 100) {
