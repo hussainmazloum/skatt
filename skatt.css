@@ -230,7 +230,7 @@ img {
 .content-table thead th,
 .arlig-table thead th {
     position: sticky;
-    top: 45px; /* يجب أن يكون أكبر من ارتفاع h2 */
+    top: 45px; /* Den må være større enn h2 */
     z-index: 10;
     background-color: #ffffff;
     color: rgb(7, 90, 32);
@@ -301,7 +301,8 @@ img {
   }
 
   input {
-    width: 130px;
+    width: 70%;
+    flex-wrap: wrap;
   }
   
 
@@ -310,8 +311,8 @@ img {
 }
 
   .btn {
-    width: 120px;
-    height: 35px;
+    width: 50%;
+    flex-wrap: wrap;
   }
 
   .buttons {
